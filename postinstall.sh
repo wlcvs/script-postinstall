@@ -2,6 +2,11 @@
 
 # Ubuntu de inicio
 
+# Agora eu tenho que fazer ele identificar o sistema e executar 
+# um determinado grupo de comandos 
+
+# so vo testar uns bagui primeiro
+
 # Tornando o arquivo executável eu suponho
 set -e
 
@@ -44,6 +49,7 @@ PROGRAMAS_PARA_INSTALAR=(
   git
   wget
   vim
+  flatpak
 )
 
 install_debs(){
@@ -60,6 +66,11 @@ for nome_do_programa in ${PROGRAMAS_PARA_INSTALAR[@]}; do
 done
 
 }
+
+## Adicionando repositório Flathub ##
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && 
+
 
 ## Instalando pacotes Flatpak ##
 install_flatpaks(){
