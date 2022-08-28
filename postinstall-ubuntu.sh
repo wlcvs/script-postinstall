@@ -33,13 +33,13 @@ travas_apt(){
 ## Adicionando/Confirmando arquitetura de 32 bits ##
 add_archi386(){
 
-sudo dpkg --add-architecture i386
+  sudo dpkg --add-architecture i386
 
 }
 ## Atualizando o repositório ##
 just_apt_update(){
 
-sudo apt update -y
+  sudo apt update -y
 
 }
 
@@ -49,21 +49,22 @@ PROGRAMAS_PARA_INSTALAR=(
   git
   wget
   vim
+  alacritty
   flatpak
 )
 
 install_debs(){
 
-# Instalar programas no apt
-echo -e "${VERDE}[INFO] - Instalando pacotes apt do repositório${SEM_COR}"
+  # Instalar programas no apt
+  echo -e "${VERDE}[INFO] - Instalando pacotes apt do repositório${SEM_COR}"
 
-for nome_do_programa in ${PROGRAMAS_PARA_INSTALAR[@]}; do
-  if ! dpkg -l | grep -q $nome_do_programa; then # Só instala se já não estiver instalado
-    sudo apt install "$nome_do_programa" -y
-  else
-    echo "[INSTALADO] - $nome_do_programa"
-  fi
-done
+  for nome_do_programa in ${PROGRAMAS_PARA_INSTALAR[@]}; do
+    if ! dpkg -l | grep -q $nome_do_programa; then # Só instala se já não estiver instalado
+      sudo apt install "$nome_do_programa" -y
+    else
+      echo "[INSTALADO] - $nome_do_programa"
+    fi
+  done
 
 }
 
