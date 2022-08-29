@@ -6,17 +6,17 @@ Eu troco muito de distro, uma hora eu tinha que automatizar isso
 
 Execute esse comando para instalar a versão para distros baseadas no Ubuntu
 ```shell
-sh -c "$(curl -fsSl https://raw.githubusercontent.com/wlcvs/script-postinstall/main/postinstall-ubuntu.sh)`
+sh -c "$(curl -fsSl https://raw.githubusercontent.com/wlcvs/script-postinstall/main/postinstall-ubuntu.sh)"
 ```
 
 Já para distros baseadas em Red Hat execute esse comando  
 ```shell
-sh -c "$(curl -fsSl https://raw.githubusercontent.com/wlcvs/script-postinstall/main/postinstall-red-hat.sh)`
+sh -c "$(curl -fsSl https://raw.githubusercontent.com/wlcvs/script-postinstall/main/postinstall-red-hat.sh)"
 ```
 
 Por fim execute esse comando para distros baseadas em Arch
 ```shell
-sh -c "$(curl -fsSl https://raw.githubusercontent.com/wlcvs/script-postinstall/main/postinstall-arch.sh)`
+sh -c "$(curl -fsSl https://raw.githubusercontent.com/wlcvs/script-postinstall/main/postinstall-arch.sh)"
 ```
 
 
