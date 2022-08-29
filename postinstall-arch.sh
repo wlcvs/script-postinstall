@@ -35,7 +35,7 @@ system_clean(){
 
 pacman_update
 install_flatpaks
-dnf_update
+pacman_update
 system_clean
 
 ## finalização
